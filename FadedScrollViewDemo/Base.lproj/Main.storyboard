@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FadedScrollViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JJ8-rt-clT">
+                                <rect key="frame" x="8" y="8" width="359" height="72"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTB-ke-5Wx">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ED-7E-0Pz">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="82B-rt-GLv">
+                                                <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="fadeTop:" destination="BYZ-38-t0r" eventType="valueChanged" id="KFu-TQ-rgY"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7d-Rs-CKJ">
+                                        <rect key="frame" x="0.0" y="41" width="359" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-Vw-khp">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SH5-qv-tNu">
+                                                <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="fadeBottom:" destination="BYZ-38-t0r" eventType="valueChanged" id="EKd-K3-lST"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x78-cN-EaP" customClass="FadedScrollView" customModule="FadedScrollViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-sh-CV5">
+                                        <rect key="frame" x="19" y="8" width="337.5" height="555268.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone-x-display" translatesAutoresizingMaskIntoConstraints="NO" id="7t1-yF-0aA">
+                                                <rect key="frame" x="0.0" y="0.0" width="337.5" height="128"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-Zg-CQk">
+                                                <rect key="frame" x="0.0" y="128" width="337.5" height="555140.5"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper dolor a facilisis commodo. Vivamus vel orci ultrices, sodales enim eu, tempus libero. Nulla enim lectus, viverra eget lobortis id, bibendum ac leo. Nulla non placerat quam, eu tempus urna. Nullam sit amet vehicula sapien, sed viverra nunc. Pellentesque a blandit sapien. Duis pulvinar cursus sollicitudin. Fusce fringilla vestibulum lacus, non imperdiet elit. In hac habitasse platea dictumst. Donec suscipit ex in bibendum ultricies.
+
+Integer mollis, nunc vitae commodo cursus, turpis ipsum malesuada ligula, vitae pellentesque nibh arcu sed arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tempor in sem at imperdiet. Mauris vitae nibh metus. Mauris mattis sed odio vel posuere. Cras sagittis fringilla ante eu consectetur. Donec porta nibh sed ex molestie consectetur. Pellentesque maximus quis ex ut malesuada.
+
+Sed luctus ut massa vel dapibus. Phasellus suscipit lobortis aliquet. Donec posuere rutrum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non faucibus nisl. In at neque at est facilisis euismod. Nullam suscipit ut ipsum scelerisque pretium. Aenean aliquam sit amet tortor ac pretium. Duis odio quam, laoreet ut tempor nec, mattis semper libero. Duis aliquet eros ac massa hendrerit pharetra. Phasellus tempus placerat arcu nec dignissim. Fusce nulla nisl, rutrum sed tristique accumsan, scelerisque facilisis ligula. Ut vitae nulla libero. Praesent elementum orci non felis condimentum accumsan.
+
+Pellentesque sollicitudin enim vitae nunc placerat tincidunt. Phasellus et risus semper dui convallis pulvinar lobortis ut ex. Aenean mattis ipsum nisi, id malesuada metus faucibus a. Fusce aliquet auctor mauris id ullamcorper. Proin in blandit lacus. Sed pharetra accumsan facilisis. Donec pretium, nunc eget mollis tempor, massa orci cursus lorem, id tristique lacus neque ac diam. Morbi mollis ante non velit mattis pharetra. Vivamus pharetra, ipsum vitae porttitor gravida, orci ex rutrum enim, ac consectetur felis sem at velit. Nulla ac libero eu ex bibendum scelerisque. Donec ornare lorem purus, in laoreet nibh tempus sed. Integer nisi mi, euismod nec varius sit amet, lacinia sit amet eros. Etiam nec consectetur erat.
+
+Mauris nisl velit, interdum venenatis turpis non, luctus bibendum justo. Vivamus dolor lacus, semper a mauris ac, fermentum suscipit nisi. Aliquam vitae diam ultrices, finibus dui ac, posuere nulla. Vestibulum venenatis ex nec nisi pretium egestas. Suspendisse turpis tortor, tempus pulvinar eleifend molestie, ornare id sapien. Nulla auctor lacus a sem iaculis, ac egestas quam euismod. Ut eget eros pulvinar, cursus velit vel, tincidunt ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quam nisl, imperdiet non tristique quis, accumsan a ante. Etiam laoreet odio lorem, ut imperdiet ex egestas ac. Ut vel dolor egestas, mollis sapien ut, accumsan ex.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Rnz-sh-CV5" secondAttribute="bottom" constant="8" id="4DU-14-U17"/>
+                                    <constraint firstItem="Rnz-sh-CV5" firstAttribute="centerX" secondItem="x78-cN-EaP" secondAttribute="centerX" id="HRr-Zi-zEa"/>
+                                    <constraint firstItem="Rnz-sh-CV5" firstAttribute="top" secondItem="x78-cN-EaP" secondAttribute="top" constant="8" id="MB2-K4-D9c"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fadeTop" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fadeBottom" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeSize">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52156862749999999" green="0.27058823529999998" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="x78-cN-EaP" firstAttribute="top" secondItem="JJ8-rt-clT" secondAttribute="bottom" constant="8" id="ApB-vf-Y1U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x78-cN-EaP" secondAttribute="bottom" id="GNC-QP-8Kc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x78-cN-EaP" secondAttribute="trailing" id="Knx-be-8fz"/>
+                            <constraint firstItem="Rnz-sh-CV5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Qde-Fs-P4c"/>
+                            <constraint firstItem="JJ8-rt-clT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-12" id="SeD-vq-jAU"/>
+                            <constraint firstItem="JJ8-rt-clT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="d4T-5t-LvV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JJ8-rt-clT" secondAttribute="trailing" constant="8" id="mdH-AF-DYa"/>
+                            <constraint firstItem="x78-cN-EaP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nQw-ig-0CA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="x78-cN-EaP" id="nup-1w-vyy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphone-x-display" width="600" height="128"/>
+    </resources>
+</document>
